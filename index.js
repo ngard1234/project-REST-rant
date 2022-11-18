@@ -17,8 +17,10 @@ app.get('/', (req, res) => {
 
 //Add route for a 404 Page error
 app.get('*', (req, res) => {
-    res.status(404).send('<h1>404 Page</h1>')
-})
+    res.render('error404')
+  })
+  
+
 
 
 // Listen to a port number defined by a local environment variable.

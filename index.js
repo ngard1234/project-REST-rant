@@ -1,27 +1,25 @@
-
-// Get the environment variables.
+// Modules and Globals
 require('dotenv').config()
-
-// Require needed node modules.
 const express = require('express')
 const app = express()
 
+// Express Settings
+app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
+app.use(express.static('public'))
 
+// Controllers & Routes
 app.use('/places', require('./controllers/places'))
 
 app.get('/', (req, res) => {
     res.render('home')
 })
 
-//Add route for a 404 Page error
 app.get('*', (req, res) => {
     res.render('error404')
-  })
-  
+})
 
-
-
-// Listen to a port number defined by a local environment variable.
+// Listen for Connections
 app.listen(process.env.PORT)
+

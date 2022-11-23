@@ -15,7 +15,7 @@ function Def (html) {
                             <a href="/">Home</a>
                         </li>
                         <li>
-                            <a href="/">Places</a> 
+                            <a href="/places">Places</a> 
                         </li>
                         <li>
                             <a href="/places/new">Add Place</a>

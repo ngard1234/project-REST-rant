@@ -19,7 +19,7 @@ function show (data) {
               </svg>  
               <i class="bi bi-pencil"> Button</i>
             </a> 
-          
+            <hr></hr> 
             <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
             <button type="submit" className="btn btn-danger">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">

@@ -4,7 +4,7 @@ h1 {
 }
 
 img {
-    width: 50%;
+    width: 75%;
     height: auto;
 }
   
@@ -43,3 +43,11 @@ main {
   background-color: white;
 }
  
+.text-center {
+    text-align: left;
+
+}
+    
+span {
+    display: inline-block;
+}

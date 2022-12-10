@@ -6,8 +6,8 @@ function edit_form (data) {
         return (
             <Def>
               <main>
-                <h1>Add a New Place</h1>
-                <form method="POST" action={`/places/${data.id}?_method=PUT`}>
+                <h1>Edit Existing Place</h1>
+                <form method="POST" action={`/places/${data.place.id}?_method=PUT`}>
                     <div className="row">
                     <div className="form-group col-sm-6">
                         <label htmlFor="name">Place Name</label>
@@ -68,13 +68,7 @@ function edit_form (data) {
             </Def>
         )
      
-    return (
-        <Def>
-          <main>
-            <h1>Edit Place</h1>
-          </main>
-        </Def>
-    )
+    
 }
 
 module.exports = edit_form

@@ -16,22 +16,26 @@ function show (data) {
     let sumRatings = data.place.comments.reduce((tot, c) => {
       return tot + c.stars
     }, 0)
-    let averageRating = sumRatings / data.place.comments.length
+    let averageRating = Math.round(sumRatings / data.place.comments.length)
+    let stars = ''
+  for (let i = 0; i < averageRating; i++) {
+    stars += '⭐'
+  }
     rating = (
       <h3>
-        {averageRating} stars
+        {stars} stars       
       </h3>
     )
     comments = data.place.comments.map(c => {
       return (
-        <div className="border">
+        <span className="border">
           <h2 className="rant">{c.rant ? 'Rant!😡' : 'Rave! 😻'}</h2>
           <h4>{c.content}</h4>
           <h3>
             <stong>- {c.author}</stong>
           </h3>
           <h4>Rating: {c.stars}</h4>
-        </div>
+        </span>
       )
     })
   }
@@ -67,9 +71,10 @@ function show (data) {
             <a href={`/places/${data.place.id}/edit`} className="btn btn-warning" >Edit</a> &nbsp;&nbsp;
             </span>
             <span>
-            <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
+            <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}> 
               <button type="submit" className="btn btn-danger" >Delete</button>
-            </form> 
+            </form>
+             
             </span>
               
         </div>

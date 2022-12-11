@@ -134,8 +134,8 @@ router.delete('/:id', (req, res) => {
   })
 })
 
-//router.delete('/:id', (req, res) => {
-//  res.send('DELETE /places/:id stub')
+//router.delete('/:id/comment/c.id', (req, res) => {
+//  res.send('DELETE /places stub')
 //})
 
 router.put('/:id', (req, res) => {

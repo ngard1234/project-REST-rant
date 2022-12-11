@@ -46,7 +46,7 @@ function edit_form (data) {
                         value={data.place.state}/>
                     </div>
                     <br></br>
-                    <div className="form-group">
+                    <div className="form-group col-sm-6">
                         <label htmlFor="cuisines">Cuisines</label>
                         <input 
                         className="form-control" 
@@ -55,12 +55,21 @@ function edit_form (data) {
                         required 
                         value={data.place.cuisines}/>
                     </div>
+                    <br></br>
+                     <div className="form-group col-sm-6">
+                        <label htmlFor="founded">Founded</label>
+                        <input className="form-control" 
+                        id="founded" 
+                        name="founded" 
+                        value={data.place.founded} 
+                        />
+                    </div>   
                     </div>
                     <br></br>&nbsp;
                     <input 
                     className="btn btn-primary" 
                     type="submit" 
-                    value="Edit Place" />
+                    value="Update Place" />
                     
                 </form>
     
